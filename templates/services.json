@@ -778,5 +778,31 @@
                 "https://www.workday.com/"
             ]
         }
+    },
+    {
+        "id": 22,
+        "request": {
+            "method": "GET",
+            "baseURL": "https://github.com",
+            "path": ["/apps/{TARGET}"],
+            "body": null
+        },
+        "response": {
+            "statusCode": 200,
+            "detectionFingerprints": ["<title>GitHub Apps - "],
+            "fingerprints": ["<title>GitHub Apps - "]
+        },
+        "metadata": {
+            "service": "github-apps",
+            "serviceName": "GitHub App",
+            "description": "Publicly listed GitHub App (a 404 means the app does not exist)",
+            "reproductionSteps": [
+                "Visit the URL",
+                "A 200 response means the GitHub App exists, a 404 means it does not"
+            ],
+            "references": [
+                "https://docs.github.com/en/apps/creating-github-apps/about-creating-github-apps/about-creating-github-apps"
+            ]
+        }
     }
 ]
